@@ -1,0 +1,12 @@
+{
+  "name": "webdev-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for Web Development Course",
+  "main": "mcp-server/server.js",
+  "scripts": {
+    "mcp": "node mcp-server/server.js",
+    "test": "node checks/ex2.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

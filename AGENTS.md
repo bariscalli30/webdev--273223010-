@@ -8,14 +8,17 @@ See `SPEC.md` for goals, non-goals and acceptance criteria.
 
 ## Commands
 <!-- How to install, run, test. Keep these exact and working. -->
-- Install: 
-- Run: 
-- Test: 
-- Coverage: 
-- MCP server: 
+- Install: `npm install`
+- Run: `npm run mcp`
+- Test: `npm test`
+- Coverage: `npm run coverage` (if applicable)
+- MCP server: `node mcp-server/server.js`
 
 ## Conventions
 <!-- Folder layout, naming, where business rules live, how errors are returned to the client. -->
+- Use plain JavaScript and modular code structure.
+- Follow JSON-RPC protocol standards strictly.
+- Keep business logic inside service files, separate from transport layers.
 
 ## Layers
 <!-- Fill in the file or folder for each layer. -->
@@ -30,7 +33,7 @@ that talks to the database directly is a second, unguarded way into your data: n
 
 ## The model feature
 <!-- Provider, env var, and the call site. -->
-- The provider is named in exactly one file: 
+- The provider is named in exactly one file: `mcp-server/server.js`
 - The key comes from an environment variable and is never committed or logged.
 - Every call has a timeout and a deterministic fallback, so the app still works when the provider is down or rate-limited.
 - The model's output is re-checked against real data before anything is saved or shown.
